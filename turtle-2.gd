@@ -9,7 +9,7 @@ func _physics_process(_delta: float) -> void:
 	# userBoost will be enabled (and timed out if not reclicked) by the user to
 	# give their turtle a little boost. Will be the min speed value.
 	# var userBoost = randi_range(10, 20)
-	var speed = randi_range(0, 100)
+	var speed = randi_range(0, 200)
 	velocity = position.direction_to(target) * speed
 	if position.distance_to(target) > 10:
 		move_and_slide()
