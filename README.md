@@ -5,6 +5,7 @@
   * Maybe even make the label hover up and down...  
 * Add retry race button to reset from countdown and an exit button to leave the game.
 
+
 ### Completed
 * Add victory flare when a turtle finishes the race first.
 * Add countdown after the start button is pressed.
