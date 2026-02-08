@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://0w7quyyqu6h2"]
+
+[ext_resource type="Script" uid="uid://cdtd2fsmgfync" path="res://countdown.gd" id="1_scgq4"]
+[ext_resource type="Script" uid="uid://cqe7wdclkdqjf" path="res://timer.gd" id="2_a2sxx"]
+[ext_resource type="Texture2D" uid="uid://buoxhh34q23bw" path="res://sarah-wilhelmi-digital-medow.jpg" id="2_xcysy"]
+[ext_resource type="FontFile" uid="uid://b7j07vghhu7ev" path="res://dogica.ttf" id="4_xcysy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3k43o"]
+texture = ExtResource("2_xcysy")
+
+[node name="Countdown" type="Control" unique_id=681545706]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_scgq4")
+
+[node name="Timer" type="Timer" parent="." unique_id=217921296]
+script = ExtResource("2_a2sxx")
+
+[node name="Panel" type="Panel" parent="." unique_id=651131708]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3k43o")
+
+[node name="Label" type="Label" parent="." unique_id=481676521]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -202.0
+offset_right = 37.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.7882353, 0.7529412, 1)
+theme_override_fonts/font = ExtResource("4_xcysy")
+theme_override_font_sizes/font_size = 128
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
