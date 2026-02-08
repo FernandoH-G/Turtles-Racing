@@ -3,3 +3,4 @@
   * Needs boost button component. 
 * Add victory flare when a turtle finishes the race first.
 * Add dirt debris animation behind turtle when they're moving.
+* Add countdown after the start button is pressed.
