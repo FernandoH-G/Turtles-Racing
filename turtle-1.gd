@@ -16,3 +16,4 @@ func _physics_process(_delta: float) -> void:
 		_animated_sprite.play("turtle-type1-moving")
 	else:
 		_animated_sprite.stop()
+		$DustParticle.emitting = false

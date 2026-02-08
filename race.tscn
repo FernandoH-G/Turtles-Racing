@@ -109,7 +109,9 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_4c57u")
 animation = &"turtle-type1-moving"
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Turtle-Type1/AnimatedSprite2D" unique_id=853549484]
+[node name="DustParticle" type="GPUParticles2D" parent="Turtle-Type1" unique_id=853549484]
+position = Vector2(89, 163)
+scale = Vector2(3, 3)
 amount = 30
 texture = ExtResource("4_7ewey")
 process_material = SubResource("ParticleProcessMaterial_ac655")
