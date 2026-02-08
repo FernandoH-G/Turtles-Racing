@@ -4,6 +4,37 @@
 [ext_resource type="Texture2D" uid="uid://to70f1gbxqr5" path="res://turtle2.png" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://46q2gxy6gl5t" path="res://turtle.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://buoxhh34q23bw" path="res://sarah-wilhelmi-digital-medow.jpg" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://d35qss8acrmkf" path="res://turtle_3.gd" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://bn767y2us0vka" path="res://Little_Turtle.png" id="5_lquwl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mycd"]
+atlas = ExtResource("5_lquwl")
+region = Rect2(0, 108, 48, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_272bh"]
+atlas = ExtResource("5_lquwl")
+region = Rect2(48, 108, 48, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vw27"]
+atlas = ExtResource("5_lquwl")
+region = Rect2(96, 108, 48, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kek77"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mycd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_272bh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vw27")
+}],
+"loop": true,
+"name": &"turtle-type1-moving",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=845547416]
 
@@ -31,3 +62,12 @@ position = Vector2(88, 163)
 scale = Vector2(3, 3)
 texture = ExtResource("2_0xm2m")
 flip_h = true
+
+[node name="Turtle3" type="CharacterBody2D" parent="." unique_id=566840674]
+script = ExtResource("5_7mycd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Turtle3" unique_id=604968468]
+position = Vector2(83, 258)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_kek77")
+animation = &"turtle-type1-moving"
