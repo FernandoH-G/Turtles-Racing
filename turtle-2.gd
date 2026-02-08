@@ -14,6 +14,8 @@ func _physics_process(_delta: float) -> void:
 	if position.distance_to(target) > 10:
 		move_and_slide()
 		_animated_sprite.play("turtle-type2-moving")
+		# Toggle emitting off in editor and set emitting = true programatically.
+		# $DustParticle.emitting = true
 	else:
 		_animated_sprite.stop()
 		$DustParticle.emitting = false
