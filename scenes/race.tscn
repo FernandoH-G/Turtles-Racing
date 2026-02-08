@@ -67,7 +67,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_lrjie")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=348330603]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1264543546]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -75,14 +75,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = 93.0
+offset_top = -36.0
 offset_right = 171.0
-offset_bottom = 252.0
+offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 32
 
-[node name="ReplayButton" type="Button" parent="VBoxContainer" unique_id=307372193]
+[node name="ResetButton" type="Button" parent="VBoxContainer" unique_id=1146981163]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -95,9 +95,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ctjv4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_6epbv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3kd5h")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_l0hv7")
-text = "Replay"
+text = "Reset Race"
 
-[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=903207372]
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=1514008657]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -121,24 +121,25 @@ position = Vector2(72, 162)
 [node name="WinnerParticles" parent="." unique_id=2020511117 instance=ExtResource("5_w5r77")]
 layout_mode = 1
 offset_left = -9.0
-offset_top = -16.0
+offset_top = -140.0
 offset_right = -9.0
-offset_bottom = -16.0
+offset_bottom = -140.0
 
 [node name="WinnerLabel" type="Label" parent="." unique_id=1496181786]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -320.0
-offset_top = 329.0
-offset_right = 310.0
-offset_bottom = 392.0
+offset_left = -321.0
+offset_top = 113.0
+offset_right = 309.0
+offset_bottom = 174.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0.7882353, 0.7529412, 1)
 theme_override_fonts/font = ExtResource("6_ctjv4")
 theme_override_font_sizes/font_size = 30
-text = "The winner "
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="declare_winner" from="." to="." method="_on_declare_winner"]
 [connection signal="finished_race" from="TurtleV1" to="." method="_on_turtle_v_1_finished_race"]

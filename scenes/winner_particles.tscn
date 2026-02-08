@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VictoryConfetti" parent="." unique_id=54803154 instance=ExtResource("1_xirn5")]
-position = Vector2(192, 319)
+position = Vector2(192, 512)
 
 [node name="VictoryConfetti2" parent="." unique_id=415886899 instance=ExtResource("1_xirn5")]
-position = Vector2(964, 319)
+position = Vector2(960, 512)

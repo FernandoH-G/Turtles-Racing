@@ -5,6 +5,7 @@ var have_winner = false
 
 func _ready() -> void:
 	$WinnerParticles.hide()
+	$VBoxContainer.hide()
 
 
 func _on_turtle_v_1_finished_race(turtle_name: String) -> void:
@@ -21,4 +22,5 @@ func _on_turtle_v_2_finished_race(turtle_name: String) -> void:
 
 func _on_declare_winner(winner_name: String) -> void:
 	$WinnerParticles.show()
+	$VBoxContainer.show()
 	$WinnerLabel.text = "%s is the winner!" % winner_name
