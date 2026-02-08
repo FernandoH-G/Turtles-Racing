@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dlbakxybnka2t"]
+
+[ext_resource type="Texture2D" uid="uid://c3c7mhdthn8jr" path="res://turtle1.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://to70f1gbxqr5" path="res://turtle2.png" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://buoxhh34q23bw" path="res://sarah-wilhelmi-digital-medow.jpg" id="3_h2yge"]
+
+[node name="Node2D" type="Node2D" unique_id=845547416]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=726103856]
+offset_left = -163.0
+offset_top = -564.0
+offset_right = 1254.0
+offset_bottom = 1326.0
+texture = ExtResource("3_h2yge")
+
+[node name="Turtle" type="CharacterBody2D" parent="." unique_id=881527535]
+
+[node name="Sprite2D" type="Sprite2D" parent="Turtle" unique_id=931587330]
+position = Vector2(87, 73)
+scale = Vector2(3, 3)
+texture = ExtResource("1_ig7tw")
+flip_h = true
+
+[node name="Turtle2" type="CharacterBody2D" parent="." unique_id=2085681639]
+
+[node name="Sprite2D" type="Sprite2D" parent="Turtle2" unique_id=388251400]
+position = Vector2(88, 163)
+scale = Vector2(3, 3)
+texture = ExtResource("2_0xm2m")
+flip_h = true
