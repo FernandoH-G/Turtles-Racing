@@ -17,4 +17,4 @@ func _physics_process(_delta: float) -> void:
 	else:
 		_animated_sprite.stop()
 		$DustParticle.emitting = false
-		finished_race.emit("Guad")
+		finished_race.emit("Fern")
