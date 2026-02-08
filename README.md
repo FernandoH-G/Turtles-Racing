@@ -4,3 +4,5 @@
 * Add victory flare when a turtle finishes the race first.
 * Add dirt debris animation behind turtle when they're moving.
 * Add countdown after the start button is pressed.
+* Make Turtles Racing label into a 360 arc.
+  * Maybe even make the label hover up and down...
