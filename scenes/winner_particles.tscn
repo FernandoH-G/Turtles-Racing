@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bk4rfmsrtudon" path="res://scenes/victory_confetti.tscn" id="1_xirn5"]
 
-[node name="Winner" type="Control" unique_id=2020511117]
+[node name="WinnerParticles" type="Control" unique_id=2020511117]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
