@@ -14,3 +14,5 @@ func _physics_process(_delta: float) -> void:
 	if position.distance_to(target) > 10:
 		move_and_slide()
 		_animated_sprite.play("turtle-type1-moving")
+	else:
+		_animated_sprite.stop()
