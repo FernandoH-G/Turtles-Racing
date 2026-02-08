@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bk4rfmsrtudon"]
+
+[ext_resource type="Texture2D" uid="uid://cy0853tnrhh1q" path="res://confetti.png" id="1_3w7qb"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6l80q"]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[sub_resource type="Curve" id="Curve_6l80q"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.75, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.5), -2.1896408, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_m713v"]
+curve = SubResource("Curve_6l80q")
+
+[sub_resource type="Gradient" id="Gradient_ulf3q"]
+offsets = PackedFloat32Array(0, 0.2413793, 0.4597701, 0.68390805, 0.9195402)
+colors = PackedColorArray(1, 1, 0.5, 1, 1, 0.5, 0.5, 1, 0.5, 1, 0.5, 1, 0.5, 0.5, 1, 1, 1, 0.5, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6l80q"]
+gradient = SubResource("Gradient_ulf3q")
+
+[sub_resource type="Curve" id="Curve_ulf3q"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.18499999, 0.8314607), 0.0, 0.0, 0, 0, Vector2(1, 1), -0.92192465, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_6l80q"]
+curve = SubResource("Curve_ulf3q")
+
+[sub_resource type="Curve" id="Curve_m713v"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.82, 0.9887641), 0.0, 0.0, 0, 0, Vector2(0.99, 0.73033714), -3.3219328, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_87p0o"]
+curve = SubResource("Curve_m713v")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m713v"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 130.0
+initial_velocity_max = 160.0
+angular_velocity_min = -180.00002
+angular_velocity_max = 179.99998
+gravity = Vector3(0, 75, 0)
+linear_accel_min = 9.999997
+linear_accel_max = 29.999996
+damping_min = 74.0
+damping_max = 78.0
+damping_curve = SubResource("CurveTexture_6l80q")
+scale_min = 0.25
+scale_max = 0.55
+scale_curve = SubResource("CurveTexture_87p0o")
+color_initial_ramp = SubResource("GradientTexture1D_6l80q")
+alpha_curve = SubResource("CurveTexture_m713v")
+hue_variation_min = -0.020000022
+hue_variation_max = 0.019999977
+anim_speed_min = 2.0
+anim_speed_max = 5.0
+anim_offset_max = 1.0
+
+[node name="VictoryConfetti" type="Node2D" unique_id=54803154]
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=1134050426]
+material = SubResource("CanvasItemMaterial_6l80q")
+amount = 60
+texture = ExtResource("1_3w7qb")
+lifetime = 4.0
+explosiveness = 0.97
+process_material = SubResource("ParticleProcessMaterial_m713v")
