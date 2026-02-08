@@ -14,4 +14,4 @@ grow_vertical = 2
 position = Vector2(179, 309)
 
 [node name="VictoryConfetti2" parent="." unique_id=415886899 instance=ExtResource("1_xirn5")]
-position = Vector2(871, 309)
+position = Vector2(964, 309)

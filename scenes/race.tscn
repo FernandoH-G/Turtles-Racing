@@ -4,7 +4,8 @@
 [ext_resource type="Script" uid="uid://dsc7r77ew0h15" path="res://race.gd" id="1_w5r77"]
 [ext_resource type="PackedScene" uid="uid://bplgm4emk3ocg" path="res://scenes/turtle_v1.tscn" id="2_l1ls3"]
 [ext_resource type="PackedScene" uid="uid://cxfvyv48nrnde" path="res://scenes/turtle_v2.tscn" id="3_h7xf4"]
-[ext_resource type="PackedScene" uid="uid://pj0ctkq6uwng" path="res://scenes/winner.tscn" id="4_h7xf4"]
+[ext_resource type="PackedScene" uid="uid://pj0ctkq6uwng" path="res://scenes/winner.tscn" id="5_w5r77"]
+[ext_resource type="FontFile" uid="uid://b7j07vghhu7ev" path="res://dogica.ttf" id="6_ctjv4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lrjie"]
 texture = ExtResource("1_8oh5l")
@@ -33,5 +34,23 @@ position = Vector2(72, 81)
 [node name="TurtleV2" parent="." unique_id=1781730853 instance=ExtResource("3_h7xf4")]
 position = Vector2(72, 162)
 
-[node name="Winner" parent="." unique_id=2020511117 instance=ExtResource("4_h7xf4")]
+[node name="Winner" parent="." unique_id=2020511117 instance=ExtResource("5_w5r77")]
 layout_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=1496181786]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_top = 329.0
+offset_right = 310.0
+offset_bottom = 392.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 0.7882353, 0.7529412, 1)
+theme_override_fonts/font = ExtResource("6_ctjv4")
+theme_override_font_sizes/font_size = 30
+
+[connection signal="declare_winner" from="." to="." method="_on_declare_winner"]
+[connection signal="finished_race" from="TurtleV1" to="." method="_on_turtle_v_1_finished_race"]
+[connection signal="finished_race" from="TurtleV2" to="." method="_on_turtle_v_2_finished_race"]

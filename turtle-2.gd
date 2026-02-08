@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+signal finished_race(turtle_name: String)
 var target = Vector2(1000,162)
 @onready var _animated_sprite = $AnimatedSprite2D
 
@@ -19,3 +20,4 @@ func _physics_process(_delta: float) -> void:
 	else:
 		_animated_sprite.stop()
 		$DustParticle.emitting = false
+		finished_race.emit("Fern")
