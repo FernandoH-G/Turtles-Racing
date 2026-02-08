@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dfsqvjp0sqgs6"]
+
+[ext_resource type="Texture2D" uid="uid://buoxhh34q23bw" path="res://sarah-wilhelmi-digital-medow.jpg" id="1_8oh5l"]
+[ext_resource type="PackedScene" uid="uid://bplgm4emk3ocg" path="res://scenes/turtle_v1.tscn" id="2_l1ls3"]
+[ext_resource type="PackedScene" uid="uid://cxfvyv48nrnde" path="res://scenes/turtle_v2.tscn" id="3_h7xf4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lrjie"]
+texture = ExtResource("1_8oh5l")
+
+[node name="Race" type="Control" unique_id=748921017]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=815823268]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lrjie")
+
+[node name="TurtleV1" parent="." unique_id=1796024990 instance=ExtResource("2_l1ls3")]
+position = Vector2(72, 81)
+
+[node name="TurtleV2" parent="." unique_id=1781730853 instance=ExtResource("3_h7xf4")]
+position = Vector2(72, 162)

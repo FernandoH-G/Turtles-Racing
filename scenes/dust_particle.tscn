@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bixgw4a8vhl64"]
+
+[ext_resource type="Texture2D" uid="uid://c87m04rloi12u" path="res://better-dirt-q.png" id="1_f3far"]
+
+[sub_resource type="Curve" id="Curve_7ewey"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_cckmr"]
+curve = SubResource("Curve_7ewey")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ac655"]
+emission_shape_offset = Vector3(-10, 5, 0)
+emission_shape = 3
+emission_box_extents = Vector3(10, 1, 1)
+direction = Vector3(-1, 0, 0)
+spread = 60.0
+flatness = 0.5
+initial_velocity_max = 40.0
+gravity = Vector3(-1, 0, 0)
+scale_max = 1.5
+scale_over_velocity_max = 25.0
+scale_over_velocity_curve = SubResource("CurveTexture_cckmr")
+turbulence_enabled = true
+
+[node name="DustParticle" type="GPUParticles2D" unique_id=1258096510]
+scale = Vector2(3, 3)
+amount = 30
+texture = ExtResource("1_f3far")
+process_material = SubResource("ParticleProcessMaterial_ac655")

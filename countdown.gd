@@ -13,4 +13,4 @@ func _on_timer_timeout() -> void:
 	$Label.text = str(countdownTime)
 	if countdownTime == 0:
 		$Timer.stop()
-		get_tree().change_scene_to_file("res://race.tscn")
+		get_tree().change_scene_to_file("res://scenes/race.tscn")

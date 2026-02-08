@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var target = Vector2(1000,0)
+var target = Vector2(1000,81)
 @onready var _animated_sprite = $AnimatedSprite2D
 
 func _physics_process(_delta: float) -> void:

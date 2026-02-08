@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bplgm4emk3ocg"]
+
+[ext_resource type="Script" uid="uid://46q2gxy6gl5t" path="res://turtle-1.gd" id="1_5hhvm"]
+[ext_resource type="Texture2D" uid="uid://bn767y2us0vka" path="res://Little_Turtle.png" id="2_1njek"]
+[ext_resource type="PackedScene" uid="uid://bixgw4a8vhl64" path="res://scenes/dust_particle.tscn" id="3_tvv1i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
+atlas = ExtResource("2_1njek")
+region = Rect2(288, 108, 48, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
+atlas = ExtResource("2_1njek")
+region = Rect2(336, 108, 48, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kek77"]
+atlas = ExtResource("2_1njek")
+region = Rect2(384, 108, 48, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4c57u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bvp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lquwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kek77")
+}],
+"loop": true,
+"name": &"turtle-type1-moving",
+"speed": 5.0
+}]
+
+[node name="TurtleV1" type="CharacterBody2D" unique_id=1796024990]
+script = ExtResource("1_5hhvm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=872227658]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_4c57u")
+animation = &"turtle-type1-moving"
+
+[node name="DustParticle" parent="." unique_id=1258096510 instance=ExtResource("3_tvv1i")]
