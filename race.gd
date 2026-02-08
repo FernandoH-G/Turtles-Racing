@@ -21,4 +21,4 @@ func _on_turtle_v_2_finished_race(turtle_name: String) -> void:
 
 func _on_declare_winner(winner_name: String) -> void:
 	$WinnerParticles.show()
-	$Label.text = "%s is the winner!" % winner_name
+	$WinnerLabel.text = "%s is the winner!" % winner_name

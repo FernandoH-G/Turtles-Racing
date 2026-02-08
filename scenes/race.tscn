@@ -10,6 +10,45 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lrjie"]
 texture = ExtResource("1_8oh5l")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ctjv4"]
+bg_color = Color(0.8859715, 0.12808755, 0.18440714, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6epbv"]
+bg_color = Color(0.7085137, 0.08037195, 0.13305739, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3kd5h"]
+bg_color = Color(0.9737635, 0.2265012, 0.25052246, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l0hv7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6hvi"]
+bg_color = Color(0.70980394, 0.078431375, 0.13333334, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cd6ng"]
+bg_color = Color(0.972549, 0.22745098, 0.2509804, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h861m"]
+
 [node name="Race" type="Control" unique_id=748921017]
 layout_mode = 3
 anchors_preset = 15
@@ -28,6 +67,51 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_lrjie")
 
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=348330603]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 93.0
+offset_right = 171.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="ReplayButton" type="Button" parent="VBoxContainer" unique_id=307372193]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_ctjv4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ctjv4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6epbv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3kd5h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l0hv7")
+text = "Replay"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=903207372]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_ctjv4")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ctjv4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r6hvi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cd6ng")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h861m")
+text = "Exit"
+
 [node name="TurtleV1" parent="." unique_id=1796024990 instance=ExtResource("2_l1ls3")]
 position = Vector2(72, 81)
 
@@ -36,8 +120,12 @@ position = Vector2(72, 162)
 
 [node name="WinnerParticles" parent="." unique_id=2020511117 instance=ExtResource("5_w5r77")]
 layout_mode = 1
+offset_left = -9.0
+offset_top = -16.0
+offset_right = -9.0
+offset_bottom = -16.0
 
-[node name="Label" type="Label" parent="." unique_id=1496181786]
+[node name="WinnerLabel" type="Label" parent="." unique_id=1496181786]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -50,6 +138,7 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 0.7882353, 0.7529412, 1)
 theme_override_fonts/font = ExtResource("6_ctjv4")
 theme_override_font_sizes/font_size = 30
+text = "The winner "
 
 [connection signal="declare_winner" from="." to="." method="_on_declare_winner"]
 [connection signal="finished_race" from="TurtleV1" to="." method="_on_turtle_v_1_finished_race"]

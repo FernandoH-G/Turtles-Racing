@@ -18,3 +18,7 @@ config/name="turtles-racing"
 run/main_scene="uid://dphin4xatimxx"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_vim/plugin.cfg")
