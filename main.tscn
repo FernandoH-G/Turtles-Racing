@@ -24,6 +24,7 @@ texture = ExtResource("1_ig7tw")
 flip_h = true
 
 [node name="Turtle2" type="CharacterBody2D" parent="." unique_id=2085681639]
+script = ExtResource("2_1bvp3")
 
 [node name="Sprite2D" type="Sprite2D" parent="Turtle2" unique_id=388251400]
 position = Vector2(88, 163)
