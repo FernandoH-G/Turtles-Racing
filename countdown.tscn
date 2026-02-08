@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://0w7quyyqu6h2"]
 
 [ext_resource type="Script" uid="uid://cdtd2fsmgfync" path="res://countdown.gd" id="1_scgq4"]
-[ext_resource type="Script" uid="uid://cqe7wdclkdqjf" path="res://timer.gd" id="2_a2sxx"]
 [ext_resource type="Texture2D" uid="uid://buoxhh34q23bw" path="res://sarah-wilhelmi-digital-medow.jpg" id="2_xcysy"]
 [ext_resource type="FontFile" uid="uid://b7j07vghhu7ev" path="res://dogica.ttf" id="4_xcysy"]
 
@@ -18,7 +17,6 @@ grow_vertical = 2
 script = ExtResource("1_scgq4")
 
 [node name="Timer" type="Timer" parent="." unique_id=217921296]
-script = ExtResource("2_a2sxx")
 
 [node name="Panel" type="Panel" parent="." unique_id=651131708]
 layout_mode = 1
