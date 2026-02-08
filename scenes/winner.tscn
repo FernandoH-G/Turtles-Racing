@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://pj0ctkq6uwng"]
+
+[ext_resource type="PackedScene" uid="uid://bk4rfmsrtudon" path="res://scenes/victory_confetti.tscn" id="1_xirn5"]
+
+[node name="Winner" type="Control" unique_id=2020511117]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VictoryConfetti" parent="." unique_id=54803154 instance=ExtResource("1_xirn5")]
+position = Vector2(179, 309)
+
+[node name="VictoryConfetti2" parent="." unique_id=415886899 instance=ExtResource("1_xirn5")]
+position = Vector2(871, 309)

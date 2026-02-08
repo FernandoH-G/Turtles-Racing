@@ -3,6 +3,7 @@ extends CharacterBody2D
 var target = Vector2(1000,81)
 @onready var _animated_sprite = $AnimatedSprite2D
 
+
 func _physics_process(_delta: float) -> void:
 	# userBoost will be enabled (and timed out if not reclicked) by the user to
 	# give their turtle a little boost. Will be the min speed value.
