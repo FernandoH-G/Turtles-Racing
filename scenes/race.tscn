@@ -67,6 +67,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_lrjie")
 
+[node name="WinnerParticles" parent="." unique_id=2020511117 instance=ExtResource("5_w5r77")]
+layout_mode = 1
+offset_top = 191.0
+offset_bottom = -201.0
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1264543546]
 layout_mode = 1
 anchors_preset = 8
@@ -118,13 +123,6 @@ position = Vector2(72, 81)
 [node name="TurtleV2" parent="." unique_id=1781730853 instance=ExtResource("3_h7xf4")]
 position = Vector2(72, 162)
 
-[node name="WinnerParticles" parent="." unique_id=2020511117 instance=ExtResource("5_w5r77")]
-layout_mode = 1
-offset_left = -9.0
-offset_top = -140.0
-offset_right = -9.0
-offset_bottom = -140.0
-
 [node name="WinnerLabel" type="Label" parent="." unique_id=1496181786]
 layout_mode = 1
 anchors_preset = 5
@@ -142,5 +140,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="declare_winner" from="." to="." method="_on_declare_winner"]
+[connection signal="pressed" from="VBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="finished_race" from="TurtleV1" to="." method="_on_turtle_v_1_finished_race"]
 [connection signal="finished_race" from="TurtleV2" to="." method="_on_turtle_v_2_finished_race"]
