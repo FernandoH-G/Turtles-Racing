@@ -1,8 +1,8 @@
-class_name Turtle extends CharacterBody2D
+class_name TurtleFinishedRaceC extends Node
 
 
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var dust_particle: GPUParticles2D = $DustParticle
+@export var animated_sprite: AnimatedSprite2D
+@export var dust_particle: GPUParticles2D
 @export var turtle_movement_c: TurtleMovementC
 
 
@@ -11,5 +11,6 @@ func _ready() -> void:
 
 
 func finish_race(turtle_name: String)->void:
+	print("Turtle: ", turtle_name, " finished!!!")
 	animated_sprite.stop()
 	dust_particle.emitting = false

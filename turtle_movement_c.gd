@@ -28,13 +28,13 @@ func move_forward() -> void:
 	
 func stop_moving() -> void:
 	finished_race.emit(turtle_name)
+	process_mode = Node.PROCESS_MODE_DISABLED
 	
 	
 func _physics_process(_delta: float) -> void:
 	# userBoost will be enabled (and timed out if not reclicked) by the user to
 	# give their turtle a little boost. Will be the min speed value.
 	# var userBoost = randi_range(10, 20)
-	
 	if parent.position.distance_to(end_position) > 10:
 		move_forward()
 	else:
