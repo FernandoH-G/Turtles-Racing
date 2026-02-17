@@ -4,6 +4,8 @@
 * Make Turtles Racing label into a 360 arc.
   * Maybe even make the label hover up and down...  
 * Have horizontal scrolling to extend race length...
+* Add little red exclamation points over turtle that is being cheered on. Also,
+some sweat beads falling from its brow.
 
 ### Completed
 * Add victory flare when a turtle finishes the race first.
