@@ -29,16 +29,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_5vw27")
 }],
 "loop": true,
-"name": &"turtle-type2-moving",
+"name": &"default",
 "speed": 5.0
 }]
 
-[node name="TurtleV2" type="CharacterBody2D" unique_id=1781730853]
+[node name="Turtle2" type="CharacterBody2D" unique_id=1781730853]
+scale = Vector2(3, 3)
 script = ExtResource("1_pfw51")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=876536242]
-scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_kek77")
-animation = &"turtle-type2-moving"
 
 [node name="DustParticle" parent="." unique_id=1258096510 instance=ExtResource("3_hs8sv")]

@@ -24,7 +24,6 @@ scale_over_velocity_curve = SubResource("CurveTexture_cckmr")
 turbulence_enabled = true
 
 [node name="DustParticle" type="GPUParticles2D" unique_id=1258096510]
-scale = Vector2(3, 3)
 amount = 30
 texture = ExtResource("1_f3far")
 process_material = SubResource("ParticleProcessMaterial_ac655")
