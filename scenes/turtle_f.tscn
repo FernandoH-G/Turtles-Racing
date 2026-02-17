@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bplgm4emk3ocg"]
 
-[ext_resource type="Script" uid="uid://46q2gxy6gl5t" path="res://turtle.gd" id="1_7kcg0"]
+[ext_resource type="Script" uid="uid://46q2gxy6gl5t" path="res://turtle_f.gd" id="1_7kcg0"]
 [ext_resource type="Texture2D" uid="uid://bn767y2us0vka" path="res://Little_Turtle.png" id="1_hbk6c"]
 [ext_resource type="PackedScene" uid="uid://bixgw4a8vhl64" path="res://scenes/dust_particle.tscn" id="2_7kcg0"]
 [ext_resource type="Script" uid="uid://dr5x2l1oq6l7j" path="res://turtle_movement_c.gd" id="3_xrtyu"]
@@ -34,9 +34,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Turtle" type="CharacterBody2D" unique_id=1796024990]
+[node name="TurtleF" type="CharacterBody2D" unique_id=1796024990 node_paths=PackedStringArray("turtle_movement_c")]
 scale = Vector2(3, 3)
 script = ExtResource("1_7kcg0")
+turtle_movement_c = NodePath("TurtleMovementC")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=872227658]
 sprite_frames = SubResource("SpriteFrames_4c57u")
@@ -47,5 +48,3 @@ autoplay = "default"
 [node name="TurtleMovementC" type="Node" parent="." unique_id=1204413352]
 script = ExtResource("3_xrtyu")
 metadata/_custom_type_script = "uid://dr5x2l1oq6l7j"
-
-[connection signal="finished_race" from="TurtleMovementC" to="." method="_on_turtle_movement_c_finished_race"]

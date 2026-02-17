@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://buoxhh34q23bw" path="res://sarah-wilhelmi-digital-medow.jpg" id="1_8oh5l"]
 [ext_resource type="Script" uid="uid://dsc7r77ew0h15" path="res://race.gd" id="1_w5r77"]
-[ext_resource type="PackedScene" uid="uid://bplgm4emk3ocg" path="res://scenes/turtle.tscn" id="5_ctjv4"]
+[ext_resource type="PackedScene" uid="uid://bplgm4emk3ocg" path="res://scenes/turtle_f.tscn" id="5_ctjv4"]
 [ext_resource type="PackedScene" uid="uid://pj0ctkq6uwng" path="res://scenes/winner_particles.tscn" id="5_w5r77"]
 [ext_resource type="FontFile" uid="uid://b7j07vghhu7ev" path="res://dogica.ttf" id="6_ctjv4"]
 
@@ -134,10 +134,10 @@ theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Turtle" parent="." unique_id=1796024990 instance=ExtResource("5_ctjv4")]
+[node name="TurtleF" parent="." unique_id=1796024990 instance=ExtResource("5_ctjv4")]
 position = Vector2(64, 64)
 
-[node name="Marker2D" type="Marker2D" parent="Turtle" unique_id=1413610855]
+[node name="Marker2D" type="Marker2D" parent="TurtleF" unique_id=1891540093]
 position = Vector2(341.33334, 0)
 
 [connection signal="declare_winner" from="." to="." method="_on_declare_winner"]
