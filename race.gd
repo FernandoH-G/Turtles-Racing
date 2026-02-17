@@ -2,21 +2,23 @@ extends Control
 
 signal declare_winner(winner_name: String)
 var have_winner = false
+@onready var turtle_f_finished_race_c: TurtleFinishedRaceC = get_node("TurtleF/TurtleFinishedRaceC")
+@onready var turtle_w_finished_race_c: TurtleFinishedRaceC = get_node("TurtleW/TurtleFinishedRaceC")
 
 func _ready() -> void:
 	$WinnerParticles.hide()
 	$VBoxContainer.hide()
-	$VBoxContainer/ResetButton.hide()
-	$VBoxContainer/ExitButton.hide()
+	turtle_f_finished_race_c.turtle_finished.connect(turtle_f_finished)
+	turtle_w_finished_race_c.turtle_finished.connect(turtle_w_finished)
 
 
-func _on_turtle_v_1_finished_race(turtle_name: String) -> void:
+func turtle_f_finished(turtle_name: String) -> void:
 	if have_winner == false:
 		have_winner = true
 		declare_winner.emit(turtle_name)
 
 
-func _on_turtle_v_2_finished_race(turtle_name: String) -> void:
+func turtle_w_finished(turtle_name: String) -> void:
 	if have_winner == false:
 		have_winner = true
 		declare_winner.emit(turtle_name)
@@ -25,13 +27,10 @@ func _on_turtle_v_2_finished_race(turtle_name: String) -> void:
 func _on_declare_winner(winner_name: String) -> void:
 	$WinnerParticles.show()
 	$VBoxContainer.show()
-	$VBoxContainer/ResetButton.show()
-	$VBoxContainer/ExitButton.show()
 	$WinnerLabel.text = "%s is the winner!" % winner_name
 
 
 func _on_exit_button_pressed() -> void:
-	print("pressed exit button")
 	get_tree().quit()
 
 
