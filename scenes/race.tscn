@@ -31,8 +31,6 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l0hv7"]
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6hvi"]
 bg_color = Color(0.70980394, 0.078431375, 0.13333334, 1)
 corner_radius_top_left = 8
@@ -46,8 +44,6 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h861m"]
 
 [node name="Race" type="Control" unique_id=748921017]
 layout_mode = 3
@@ -99,7 +95,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ctjv4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_6epbv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3kd5h")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_l0hv7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3kd5h")
 text = "Reset Race"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=1514008657]
@@ -114,7 +110,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_ctjv4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_r6hvi")
 theme_override_styles/hover = SubResource("StyleBoxFlat_cd6ng")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_h861m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cd6ng")
 text = "Exit"
 
 [node name="WinnerLabel" type="Label" parent="." unique_id=1496181786]
