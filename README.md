@@ -7,6 +7,8 @@
 * Add little red exclamation points over turtle that is being cheered on. Also,
 some sweat beads falling from its brow.
 * Add button highlight effects (same as mousing over) when tabbing over them!
+* Add character select screen...
+  * Have four total turtles. 2 base ones and a variation of each base.
 
 ### Completed
 * Add victory flare when a turtle finishes the race first.
