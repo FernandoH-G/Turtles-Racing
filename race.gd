@@ -1,9 +1,11 @@
 extends Control
 
+
 signal declare_winner(winner_name: String)
 var have_winner = false
 @onready var turtle_f: TurtleBrain = $TurtleF
 @onready var turtle_w: TurtleBrain = $TurtleW
+
 
 func _ready() -> void:
 	$WinnerParticles.hide()
