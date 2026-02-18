@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://pj0ctkq6uwng"]
+
+[ext_resource type="PackedScene" uid="uid://bk4rfmsrtudon" path="res://scenes/victory_confetti.tscn" id="1_nkv6s"]
+
+[node name="WinnerParticle" type="Control" unique_id=2020511117]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="VictoryConfetti" parent="." unique_id=54803154 instance=ExtResource("1_nkv6s")]

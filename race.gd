@@ -8,7 +8,8 @@ var have_winner = false
 
 
 func _ready() -> void:
-	$WinnerParticles.hide()
+	$WinnerParticle.hide()
+	$WinnerParticle2.hide()
 	$VBoxContainer.hide()
 	# Do these need @onready because they're signals?
 	turtle_f.turtle_finished_race.connect(turtle_f_finished)
@@ -28,7 +29,8 @@ func turtle_w_finished(turtle_name: String) -> void:
 
 
 func _on_declare_winner(winner_name: String) -> void:
-	$WinnerParticles.show()
+	$WinnerParticle.show()
+	$WinnerParticle2.show()
 	$VBoxContainer.show()
 	$WinnerLabel.text = "%s is the winner!" % winner_name
 
