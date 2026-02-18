@@ -137,12 +137,14 @@ vertical_alignment = 1
 
 [node name="TurtleF" parent="." unique_id=1796024990 instance=ExtResource("5_ctjv4")]
 position = Vector2(64, 64)
+turtle_name = "Fern"
 
 [node name="Marker2D" type="Marker2D" parent="TurtleF" unique_id=1891540093]
 position = Vector2(341.33334, 0)
 
 [node name="TurtleW" parent="." unique_id=851880269 instance=ExtResource("6_6epbv")]
 position = Vector2(64, 128)
+turtle_name = "Wupe"
 
 [node name="Marker2D" type="Marker2D" parent="TurtleW" unique_id=152126187]
 position = Vector2(341.33334, 4.7683716e-07)

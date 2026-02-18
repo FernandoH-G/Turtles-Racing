@@ -2,14 +2,15 @@ extends Control
 
 signal declare_winner(winner_name: String)
 var have_winner = false
-@onready var turtle_f_finished_race_c: TurtleFinishedRaceC = get_node("TurtleF/TurtleFinishedRaceC")
-@onready var turtle_w_finished_race_c: TurtleFinishedRaceC = get_node("TurtleW/TurtleFinishedRaceC")
+@onready var turtle_f: TurtleBrain = $TurtleF
+@onready var turtle_w: TurtleBrain = $TurtleW
 
 func _ready() -> void:
 	$WinnerParticles.hide()
 	$VBoxContainer.hide()
-	turtle_f_finished_race_c.turtle_finished.connect(turtle_f_finished)
-	turtle_w_finished_race_c.turtle_finished.connect(turtle_w_finished)
+	# Do these need @onready because they're signals?
+	turtle_f.turtle_finished_race.connect(turtle_f_finished)
+	turtle_w.turtle_finished_race.connect(turtle_w_finished)
 
 
 func turtle_f_finished(turtle_name: String) -> void:

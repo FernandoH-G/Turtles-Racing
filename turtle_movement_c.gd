@@ -1,13 +1,12 @@
 class_name TurtleMovementC extends Node
 
 
-signal finished_race(turtle_name: String)
+signal stopped_moving()
 @export var min_speed: int = 0
 @export var max_speed: int = 200
-@export var turtle_name: String = "Fern"
-@onready var parent: CharacterBody2D = get_parent()
 var end_point: Marker2D = null
 var end_position: Vector2
+@onready var parent: CharacterBody2D = get_parent()
 
 
 func _ready() -> void:
@@ -27,7 +26,7 @@ func move_forward() -> void:
 	
 	
 func stop_moving() -> void:
-	finished_race.emit(turtle_name)
+	stopped_moving.emit()
 	process_mode = Node.PROCESS_MODE_DISABLED
 	
 	
