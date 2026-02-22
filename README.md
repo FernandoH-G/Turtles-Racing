@@ -9,6 +9,7 @@ some sweat beads falling from its brow.
 * Add character select screen...
   * Have four total turtles. 2 base ones and a variation of each base.
 
+
 ### Completed
 * Add victory flare when a turtle finishes the race first.
 * Add countdown after the start button is pressed.
